@@ -1,1 +1,1 @@
-This reposository is created as a porfolio of existing projects  done by Oleksandr Uzhva
+Welcome to Oleksandr Uzhva's IT Portfolio! This repository showcases a collection of projects that demonstrate my expertise and skills in computer science and cybersecurity. Each project highlights different aspects of my work.
