@@ -1,0 +1,513 @@
+/* default for elements on the pag */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+                     /* Header Section */
+/* header section with positioning and smooth transition effect  */
+header{
+position: fixed;
+top: 0 ;
+left: 0;
+width: 100%;
+display: flex;
+align-items: center;
+padding: 20px ;
+transition: 0.6s;
+z-index:3;
+}
+/*Logo positioning and image*/
+header .logo{
+  width: 200px; 
+  height: 120px; 
+  margin-right: auto; 
+  background-image: url(../img/171167791489749743.gif); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  cursor: pointer;
+}
+/* navigation list that give a style through the header */
+header ul
+{
+margin-left:  auto;
+margin-right: 20px;
+padding: 0 ;
+}
+/* navigation list style for items */
+header ul li{
+    display: inline-block;
+    margin: 0 5px;
+    line-height: 60px;
+    list-style: none;
+   
+}
+/* links in navigation, their size color transformation ... */
+header ul li a{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+/* add hover effect to links */
+header ul li a:hover{
+    font-weight: bold;
+}
+/* background color */
+.main-container{
+ background-color: #000;
+}
+/* style and positioning of banner container with image */
+.banner-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 99%,rgba(0,0,0,1) 100%),url(../img/IMG_5558.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+/* positioning of text in banner container */
+.banner{
+    width: 100%;
+    top: 60%;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-50%);
+    color: #f8f8ff;
+}
+/* banner heading sizing */
+.banner h1{
+    font-size: 60px;
+    font-weight: 600;
+    background: transparent;
+}
+/* banner paragraph styling */
+.banner p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+/* button styling sizing and position */
+.btn{
+    width: 200px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    background: transparent;
+    color:#ffff;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #777464;
+    border-radius: 25px;
+    cursor: pointer ;
+    position: relative;
+    overflow: hidden;
+}
+/* button hover background effect   https://getcssscan.com/css-buttons-examples */
+.hover-effect{
+border: 25px;
+background: #777464;
+height: 0;
+width: 100%;
+position: absolute;
+left: 0;
+bottom: 0;
+z-index: -1;
+transition: 0.5s ease, border-radius 0.5s ease;
+border-radius: 0 0 25px 25px;
+}
+/* button hover effect height and border */
+.btn:hover .hover-effect{
+    height:100% ;
+    border-radius: 0;
+}
+/* no button border */
+.btn:hover{
+    border: none;
+}
+/* ----------------------History Style------------------------ */
+/* style and positioning of banner container with image of history G-ClassInfo container*/
+.G-classInfo-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 99%,rgba(0,0,0,1) 100%),url(../img/IMG_5561.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+/* slidein KeyFrames effect 
+https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateY(-50%) translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-50%) translateX(0);
+      opacity: 1;
+    }
+  }
+  /* G-classInfo styles with information context with positioning and animation */
+.G-classInfo{
+    width: 40%;
+    top: 60%;
+    left: 10%;
+    position: absolute;
+    text-align: left;
+    animation: slideInFromLeft 0.5s ease-out forwards;
+    transform: translateY(-50%);
+    color: #f8f8ff;
+}
+/* header styling */
+.G-classInfo h1{
+    font-size: 60px;
+    font-weight: 600;
+    background: transparent;
+}
+/* paragraph styling */
+.G-classInfo p {
+    margin: 10px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+/* timline background color */
+.timeline-container{
+    background-color: #000;
+}
+/* The actual timeline positioning and width */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline visual appearance ahs no color as a transperant separating line "could be done with spaces allocation" */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* make style for the container around the timeline */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* adjust as needed for your layout */
+    padding: 10px 0;
+}
+/* image container style */
+.image-container {
+    flex: 1;
+    padding: 10px;
+}
+/* image scaling */
+.image-container img {
+    width: 100%; /* Adjust if you want to set a specific width */
+    height: auto;
+    border-radius: 10%;
+    
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+/* The actual content styling*/
+.content {
+  padding: 20px 30px;
+  background-color: rgba(18, 17, 17, 0.353);
+  position: relative;
+  border-radius: 20px;
+  flex: 1;
+  padding: 10px;
+  color: white;
+}
+.left .image-container {
+    order: 2; /*image on the right */
+}
+
+.right .image-container {
+    order: -1; /*image on the left */
+}
+/*----------------------SERVICE ----------------*/
+/* style and positioning of service container with image */
+.service-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 99%,rgba(0,0,0,1) 100%),url(../img/IMG_5559.jpg); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-size: cover;
+    background-position: center;
+}
+/* styles service content and scaling */
+.service {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 50px auto;
+    text-align: left;
+}
+/* heading color */
+.service h2 {
+    color: #000;
+}
+/* paragraph volor */
+.service p {
+    color: #1210106f;
+}
+/* make form 15 pixels up from the bottom */
+.form-group {
+    margin-bottom: 15px;
+}
+/* style display through form group */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+/* text input style */
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* form button style and scaling color and cursor adjustment */
+.form-group button[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+/* hover effect for form button */
+.form-group button[type="submit"]:hover {
+    background-color: #1210106f;
+}
+/*--------------------- INSURANCE--------------------- */
+/* style and positioning of insurance container with image */
+.insurance-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 99%,rgba(0,0,0,1) 100%),url(../img/IMG_5562.jpg); 
+    background-size: cover;
+    background-position: center;max-width: 100%; /* maximum width of the container */
+    padding: 20px;
+    box-sizing: border-box;
+} 
+/* insurance style for video with position and aspect ratio adjustments */
+  .insurance {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 aspect ratio for video */
+  }
+  #insurance-video {
+    border: none;
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    top: 10%;
+    left: 16%;
+  }
+/* style for insurance features section */
+  .insurance-features{
+    display: flex; /*use flexbox to align items side by side */
+    align-items: center; /*center the items vertically */
+    justify-content: space-between; /* put maximum space between the text and image */
+    background-color: #000;
+    padding: 20px; /* add some padding for spacing */
+  }
+  /* insurance text styling  */
+  .insurance-features-text{
+    margin-top: 10%;
+    width: 40%;
+    margin-left: 80px;
+  }
+  /* header styling */
+  .insurance-features h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+/* paragraph styling */
+.insurance-features p {
+    font-weight: 100;
+    line-height: 25px;
+    color: #fff;
+}
+/* positioning and width of image */
+.insurance-features-img{ 
+    margin-right: 80px;
+    max-width: 50%;
+}
+/* image adjustments and scaling */
+.insurance-features-img img {
+    width: 100%; 
+    max-width: 400px; /*maximum size of the image */
+    height: auto; /*leave original aspect ratio */
+}
+/*--------------------- CONTACT US-------------------- */
+/* style and positioning of contactus container with image */
+.contactus-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 99%,rgba(0,0,0,1) 100%),url(../img/IMG_5563.jpg); 
+    background-size: cover;
+    background-position: center;
+
+}
+/* slide in left "was redone by me but template is taken from link already referenced above" */
+@keyframes slideInFromLeft2 {
+    0% {
+      transform: translateY(-50%) translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-50%) translateX(75%);
+      opacity: 1;
+    }
+  }
+  /*styles the contact us section including position width display properties alignment background border radius shadow and animation */
+.contactus{
+    position: absolute;
+    width: 75%;
+    top: 50%;
+    max-width: 600px; 
+    display: block; 
+    padding: 20px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    animation: slideInFromLeft2 0.5s ease-out forwards;
+}
+/* styles form through contact us section with scaling and positioning using shadow  */
+form{
+    flex:1;
+    max-width: 600px;
+    padding:20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-right: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* defines position appearance of input width space from botoom smooth transition */
+ form input, form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 4px;
+    transition:0.5s ease;
+    resize: none;
+ }
+ /* form hover effect */
+ form input:hover,form textarea:hover{
+    border:1px solid #000 
+ }
+ /* form button styling */
+form button {
+    background-color: #000;
+    font-size:17px ;
+    color:#fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s ease;
+ }
+ /* form button hover effect */
+ form button:hover{
+    background-color: #1210106f;
+ }
+ form label{
+    display: block;
+    margin-bottom: 5px;
+ }
+
+
+/*---------------------- FOOTER ---------------- */
+footer {
+    background-color: #000; /*adjust color */
+    color: #fff; /* adjust text color */
+    padding: 20px 0; /*adjust padding */
+    font-family: Arial, sans-serif; /* Adjust font-family as needed */
+}
+/* layout style of the footer */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* footer logos styling */
+.footer-logo-section .logo {
+    margin: 0 10px; 
+    height: auto; 
+    width: 80px; 
+}
+/* styles margin of footer section */
+.footer-link-section {
+    margin-top: 20px;
+}
+/* actual link styling */
+.footer-link {
+    margin: 0 15px; 
+    color: #fff;
+    text-decoration: none;
+}
+/* links hover effect */
+.footer-link:hover {
+    text-decoration: underline; /* Underline on hover for visual feedback */
+}
+/* social icons section */
+.footer-social-section {
+    margin-top: 20px;
+}
+/* icon adjustments */
+.social-icon {
+    margin: 0 10px; 
+    text-decoration: none; 
+    border: none; 
+    outline: none; 
+    box-shadow: none; 
+}
+/* scaling of images  */
+.social-icon img {
+    width: 24px; /*adjust social icon size */
+    height: auto; /* default aspect ratio */
+    transition: transform 0.3s ease; 
+}
+/* icon hover effect */
+.social-icon:hover img {
+    transform: scale(1.1); /*scale up icon on hover */
+}
+/* footer disclaimer scaling  */
+.footer-disclaimer p {
+    margin-top: 20px; 
+    font-size: 0.8em; 
+    text-align: center; 
+    width: 100%; 
+}
